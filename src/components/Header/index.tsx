@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
 import {
   HeaderSection,
   LogoContainer,
@@ -45,13 +44,8 @@ const Header = () => {
         <CustomNavLinkSmall onClick={() => scrollTo("communicate")}>
           <Span>Communication</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
-        >
-          <Span>
-            <Button>Contact</Button>
-          </Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
+          <Span>Contact</Span>
         </CustomNavLinkSmall>
       </>
     );
@@ -60,9 +54,9 @@ const Header = () => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="150px" height="64px" />
+        <Row justify='space-between'>
+          <LogoContainer to='/' aria-label='homepage'>
+            <SvgIcon src='logo.svg' width='150px' height='64px' />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
