@@ -1,0 +1,35 @@
+{
+  "files": {
+    "static/js/0.78a9489d.chunk.js": "/landing-page/static/js/0.78a9489d.chunk.js",
+    "static/js/0.78a9489d.chunk.js.map": "/landing-page/static/js/0.78a9489d.chunk.js.map",
+    "static/js/1.c017f01c.chunk.js": "/landing-page/static/js/1.c017f01c.chunk.js",
+    "static/js/1.c017f01c.chunk.js.map": "/landing-page/static/js/1.c017f01c.chunk.js.map",
+    "main.js": "/landing-page/static/js/main.92900cf8.chunk.js",
+    "main.js.map": "/landing-page/static/js/main.92900cf8.chunk.js.map",
+    "runtime-main.js": "/landing-page/static/js/runtime-main.7aa8b1c7.js",
+    "runtime-main.js.map": "/landing-page/static/js/runtime-main.7aa8b1c7.js.map",
+    "static/css/4.a95be28f.chunk.css": "/landing-page/static/css/4.a95be28f.chunk.css",
+    "static/js/4.26501931.chunk.js": "/landing-page/static/js/4.26501931.chunk.js",
+    "static/js/4.26501931.chunk.js.map": "/landing-page/static/js/4.26501931.chunk.js.map",
+    "static/js/5.60cd0ba4.chunk.js": "/landing-page/static/js/5.60cd0ba4.chunk.js",
+    "static/js/5.60cd0ba4.chunk.js.map": "/landing-page/static/js/5.60cd0ba4.chunk.js.map",
+    "static/js/6.6c99042a.chunk.js": "/landing-page/static/js/6.6c99042a.chunk.js",
+    "static/js/6.6c99042a.chunk.js.map": "/landing-page/static/js/6.6c99042a.chunk.js.map",
+    "static/js/7.a2c35d0b.chunk.js": "/landing-page/static/js/7.a2c35d0b.chunk.js",
+    "static/js/7.a2c35d0b.chunk.js.map": "/landing-page/static/js/7.a2c35d0b.chunk.js.map",
+    "static/js/8.d00987af.chunk.js": "/landing-page/static/js/8.d00987af.chunk.js",
+    "static/js/8.d00987af.chunk.js.map": "/landing-page/static/js/8.d00987af.chunk.js.map",
+    "static/js/9.efcd0079.chunk.js": "/landing-page/static/js/9.efcd0079.chunk.js",
+    "static/js/9.efcd0079.chunk.js.map": "/landing-page/static/js/9.efcd0079.chunk.js.map",
+    "index.html": "/landing-page/index.html",
+    "static/css/4.a95be28f.chunk.css.map": "/landing-page/static/css/4.a95be28f.chunk.css.map",
+    "static/js/1.c017f01c.chunk.js.LICENSE.txt": "/landing-page/static/js/1.c017f01c.chunk.js.LICENSE.txt",
+    "static/js/4.26501931.chunk.js.LICENSE.txt": "/landing-page/static/js/4.26501931.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7aa8b1c7.js",
+    "static/css/4.a95be28f.chunk.css",
+    "static/js/4.26501931.chunk.js",
+    "static/js/main.92900cf8.chunk.js"
+  ]
+}
