@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { notification } from "antd";
-import axios from "axios";
 
 export const useForm = (validate: any) => {
   const [values, setValues] = useState({});
@@ -11,28 +10,23 @@ export const useForm = (validate: any) => {
     notification["success"]({
       message: "Success",
       description: "Your message has been sent!",
+      style: {borderRadius: "15px"}
     });
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): boolean => {
     event.preventDefault();
     setErrors(validate(values));
-    // Your url for API
-    const url = "";
-    if (Object.keys(values).length === 3) {
-      axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
-        });
+    setShouldSubmit(true);
+    if (errors) {
+      return false;
     }
+    return true;
   };
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues("");
+      setValues({});
       openNotificationWithIcon();
     }
   }, [errors, shouldSubmit]);

@@ -9,7 +9,7 @@ export const FooterSection = styled("footer")`
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #FFA45B;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -64,14 +64,14 @@ export const Large = styled(Link)<any>`
   &:hover {
     color: rgb(255, 130, 92);
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    text-decoration: rgb(255, 130, 92) underline;
   }
 `;
 
 export const Chat = styled("p")`
   color: #18216d;
   max-width: fit-content;
-  border-bottom: 1px solid #18216d;
+  border-bottom: 1px solid #FFA45B;
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
@@ -88,7 +88,7 @@ export const Empty = styled("div")`
 `;
 
 export const FooterContainer = styled("div")`
-  max-width: 510px;
+  max-width: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -126,16 +126,6 @@ export const FooterContainer = styled("div")`
   }
 `;
 
-export const Language = styled("h4")`
-  font-size: 22px;
-  text-transform: capitalize;
-  color: #18216d;
-
-  @media screen and (max-width: 414px) {
-    padding: 1.5rem 0;
-  }
-`;
-
 export const Label = styled("label")`
   font-size: 22px;
   text-transform: capitalize;
@@ -148,23 +138,4 @@ export const Label = styled("label")`
     padding: 1.5rem 0;
     margin-bottom: 1rem;
   }
-`;
-
-export const LanguageSwitch = styled("div")<any>`
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-
-  &:hover,
-  &:active,
-  &:focus {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-`;
-
-export const LanguageSwitchContainer = styled("div")`
-  display: flex;
-  justify-content: space-between;
-  width: 85px;
 `;

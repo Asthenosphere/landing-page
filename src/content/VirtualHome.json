@@ -1,0 +1,14 @@
+{
+  "title": "Your virtual home",
+  "text": "This is a virtual place for just you and your partner. Put on your creative hat and make it cosy!",
+  "section": [
+    {
+      "title": "Furniture",
+      "content": "We believe that a timeline is the best way to collate memorable things."
+    },
+    {
+      "title": "Pets",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  ]
+}
