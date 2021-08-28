@@ -34,21 +34,31 @@ const Header = () => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
-          <Span>Dates</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("virtual_home")}>
-          <Span>Virtual Home</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("timeline")}>
-          <Span>Timeline</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("communicate")}>
-          <Span>Communication</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
-          <Span>Contact</Span>
-        </CustomNavLinkSmall>
+        <Row justify='start'>
+          <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
+            <span>Dates</span>
+          </CustomNavLinkSmall>
+        </Row>
+        <Row justify='start'>
+          <CustomNavLinkSmall onClick={() => scrollTo("virtual_home")}>
+            <Span>Virtual Home</Span>
+          </CustomNavLinkSmall>
+        </Row>
+        <Row justify='start'>
+          <CustomNavLinkSmall onClick={() => scrollTo("timeline")}>
+            <Span>Timeline</Span>
+          </CustomNavLinkSmall>
+        </Row>
+        <Row justify='start'>
+          <CustomNavLinkSmall onClick={() => scrollTo("communicate")}>
+            <Span>Communication</Span>
+          </CustomNavLinkSmall>
+        </Row>
+        <Row justify='start'>
+          <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
+            <Span>Contact</Span>
+          </CustomNavLinkSmall>
+        </Row>
       </>
     );
   };
@@ -70,11 +80,11 @@ const Header = () => {
         <Drawer
           closable={false}
           visible={visible}
-          placement='left'
+          placement='right'
           onClose={onClose}
         >
-          <Row justify='center'>
-            <Col style={{ marginBottom: "2.5rem" }}>
+          <Row justify='start'>
+            <Col style={{ padding: "1.25rem" }}>
               <Menu>Menu</Menu>
             </Col>
           </Row>
