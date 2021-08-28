@@ -26,14 +26,12 @@ const Contact = ({ title, content, id }: ContactProps) => {
   return (
     <ContactContainer id={id}>
       <Row justify='space-between' align='middle'>
-        <Col lg={12} md={12} sm={24} xs={24}>
+        <Col lg={11} md={11} sm={11} xs={24}>
           <Slide direction='left'>
-            <Row justify='center'>
-              <Block title={title} content={content} />
-            </Row>
+            <Block title={title} content={content} />
           </Slide>
         </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
+        <Col lg={11} md={11} sm={12} xs={24}>
           <Slide direction='right'>
             <Row justify='center'>
               <FormGroup autoComplete='off' onSubmit={handleSubmit}>
