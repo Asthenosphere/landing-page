@@ -43,11 +43,7 @@ export const ContactWrapper = styled("div")<any>`
 `;
 
 export const Burger = styled("div")`
-  @media only screen and (max-width: 1024px) {
-    display: block;
-  }
-
-  display: none;
+  display: block;
 
   svg {
     fill: #2e186a;

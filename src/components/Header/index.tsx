@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import Container from "../../common/Container";
+import { SvgIcon } from "../../common/SvgIcon";
 import {
   HeaderSection,
   LogoContainer,
   Burger,
-  NotHidden,
+  NavLink,
   Menu,
   CustomNavLinkSmall,
   Outline,
@@ -36,7 +37,7 @@ const Header = () => {
       <>
         <Row justify='start'>
           <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
-            <span>Dates</span>
+            <Span>Dates</Span>
           </CustomNavLinkSmall>
         </Row>
         <Row justify='start'>
@@ -70,9 +71,16 @@ const Header = () => {
           <LogoContainer to='/' aria-label='homepage'>
             <img src={BookImage} alt='Our Story' width='64px' height='64px' />
           </LogoContainer>
-          <NotHidden>
-            <MenuItem />
-          </NotHidden>
+          <NavLink>
+            <div>
+              <SvgIcon
+                src='logo.svg'
+                aria-label='homepage'
+                width='140px'
+                height='64px'
+              />
+            </div>
+          </NavLink>
           <Burger onClick={showDrawer}>
             <Outline />
           </Burger>
@@ -84,8 +92,8 @@ const Header = () => {
           onClose={onClose}
         >
           <Row justify='start'>
-            <Col style={{ padding: "1.25rem" }}>
-              <Menu>Menu</Menu>
+            <Col style={{ padding: "1rem", marginBottom: "1rem" }}>
+              <Menu onClick={() => setVisibility(false)}>Menu</Menu>
             </Col>
           </Row>
           <MenuItem />
