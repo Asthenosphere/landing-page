@@ -6,6 +6,11 @@ import Timeline from "../../content/Timeline.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
+import DatesImage from "../../assets/png/dates.png";
+import HomeImage from "../../assets/png/virtual_home.png";
+import CallImage from "../../assets/png/call.png";
+import TimelineImage from "../../assets/png/timeline.png";
+
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
@@ -27,6 +32,9 @@ const Home = () => {
         title={IntroContent.title}
         content={IntroContent.text}
         icon='developer.svg'
+        image={DatesImage}
+        width='145%'
+        height='145%'
         id='intro'
       />
       <ContentBlock
@@ -35,6 +43,9 @@ const Home = () => {
         content={VirtualHome.text}
         section={VirtualHome.section}
         icon='graphs.svg'
+        image={HomeImage}
+        width='130%'
+        height='130%'
         id='virtual_home'
       />
       <ContentBlock
@@ -42,6 +53,9 @@ const Home = () => {
         title={Timeline.title}
         content={Timeline.text}
         icon='product-launch.svg'
+        image={TimelineImage}
+        width='115%'
+        height='115%'
         id='timeline'
       />
       <ContentBlock
@@ -49,6 +63,9 @@ const Home = () => {
         title={ProductContent.title}
         content={ProductContent.text}
         icon='waving.svg'
+        image={CallImage}
+        width='125%'
+        height='125%'
         id='communicate'
       />
       <Contact

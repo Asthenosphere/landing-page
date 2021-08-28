@@ -14,6 +14,7 @@ import {
 
 const LeftContentBlock = ({
   icon,
+  image,
   title,
   content,
   section,
@@ -24,7 +25,13 @@ const LeftContentBlock = ({
       <Fade direction='left'>
         <Row justify='space-between' align='middle'>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width='100%' height='100%' />
+            {image ? (
+              <Row justify='center'>
+                <img src={image} width='135%' height='135%' alt='screenshot' />
+              </Row>
+            ) : (
+              <SvgIcon src={icon} width='100%' height='100%' />
+            )}
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
