@@ -34,31 +34,21 @@ const Header = () => {
     };
     return (
       <>
-        <Row justify='start'>
-          <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
-            <Span>Dates</Span>
-          </CustomNavLinkSmall>
-        </Row>
-        <Row justify='start'>
-          <CustomNavLinkSmall onClick={() => scrollTo("virtual_home")}>
-            <Span>Virtual Home</Span>
-          </CustomNavLinkSmall>
-        </Row>
-        <Row justify='start'>
-          <CustomNavLinkSmall onClick={() => scrollTo("timeline")}>
-            <Span>Timeline</Span>
-          </CustomNavLinkSmall>
-        </Row>
-        <Row justify='start'>
-          <CustomNavLinkSmall onClick={() => scrollTo("communicate")}>
-            <Span>Communication</Span>
-          </CustomNavLinkSmall>
-        </Row>
-        <Row justify='start'>
-          <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
-            <Span>Contact</Span>
-          </CustomNavLinkSmall>
-        </Row>
+        <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
+          <Span>Dates</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("virtual_home")}>
+          <Span>Virtual Home</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("timeline")}>
+          <Span>Timeline</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("communicate")}>
+          <Span>Communication</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
+          <Span>Contact</Span>
+        </CustomNavLinkSmall>
       </>
     );
   };

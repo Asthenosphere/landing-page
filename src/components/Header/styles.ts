@@ -4,7 +4,6 @@ import { MenuOutlined } from "@ant-design/icons";
 
 export const HeaderSection = styled("header")`
   padding: 1rem 0.5rem;
-
   .ant-row-space-between {
     align-items: center;
     text-align: center;
@@ -23,11 +22,9 @@ export const NavLink = styled("div")`
 export const CustomNavLink = styled("div")`
   width: 203px;
   display: inline-block;
-
   @media only screen and (max-width: 411px) {
     width: 150px;
   }
-
   @media only screen and (max-width: 320px) {
     width: 118px;
   }
@@ -43,8 +40,10 @@ export const ContactWrapper = styled("div")<any>`
 `;
 
 export const Burger = styled("div")`
-  display: block;
-
+  @media only screen and (max-width: 1024px) {
+    display: block;
+  }
+  display: none;
   svg {
     fill: #2e186a;
   }
@@ -67,7 +66,6 @@ export const CustomNavLinkSmall = styled(NavLink)`
   color: #18216d;
   transition: color 0.2s ease-in;
   margin: 1rem 1rem;
-
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 1.25rem;
   }
@@ -89,7 +87,6 @@ export const Outline = styled(MenuOutlined)<any>`
 export const Span = styled("span")`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-
   &:hover,
   &:active,
   &:focus {
