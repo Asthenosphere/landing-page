@@ -70,7 +70,7 @@ const Header = () => {
         <Drawer
           closable={false}
           visible={visible}
-          placement='left'
+          placement='right'
           onClose={onClose}
         >
           <Row justify='center'>
