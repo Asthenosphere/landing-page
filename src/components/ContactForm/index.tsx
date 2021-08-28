@@ -17,7 +17,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type];
     return (
-      <Zoom direction="left">
+      <Zoom direction='left'>
         <Span erros={errors[type]}>{ErrorMessage}</Span>
       </Zoom>
     );
@@ -25,48 +25,52 @@ const Contact = ({ title, content, id }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
-        <Col lg={12} md={11} sm={24} xs={24}>
-          <Slide direction="left">
-            <Block title={title} content={content} />
+      <Row justify='space-between' align='middle'>
+        <Col lg={12} md={12} sm={24} xs={24}>
+          <Slide direction='left'>
+            <Row justify='center'>
+              <Block title={title} content={content} />
+            </Row>
           </Slide>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
-          <Slide direction="right">
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={values.name || ""}
-                  onChange={handleChange}
-                />
-                <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="email"
-                  placeholder="Your Email"
-                  value={values.email || ""}
-                  onChange={handleChange}
-                />
-                <ValidationType type="email" />
-              </Col>
-              <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message || ""}
-                  name="message"
-                  onChange={handleChange}
-                />
-                <ValidationType type="message" />
-              </Col>
-              <ButtonContainer>
-                <Button name="submit">Submit</Button>
-              </ButtonContainer>
-            </FormGroup>
+          <Slide direction='right'>
+            <Row justify='center'>
+              <FormGroup autoComplete='off' onSubmit={handleSubmit}>
+                <Col span={24}>
+                  <Input
+                    type='text'
+                    name='name'
+                    placeholder='Your Name'
+                    value={values.name || ""}
+                    onChange={handleChange}
+                  />
+                  <ValidationType type='name' />
+                </Col>
+                <Col span={24}>
+                  <Input
+                    type='text'
+                    name='email'
+                    placeholder='Your Email'
+                    value={values.email || ""}
+                    onChange={handleChange}
+                  />
+                  <ValidationType type='email' />
+                </Col>
+                <Col span={24}>
+                  <TextArea
+                    placeholder='Your Message'
+                    value={values.message || ""}
+                    name='message'
+                    onChange={handleChange}
+                  />
+                  <ValidationType type='message' />
+                </Col>
+                <ButtonContainer>
+                  <Button name='submit'>Submit</Button>
+                </ButtonContainer>
+              </FormGroup>
+            </Row>
           </Slide>
         </Col>
       </Row>

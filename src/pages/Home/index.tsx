@@ -1,9 +1,9 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
+import DatesContent from "../../content/DatesContent.json";
+import WelcomeContent from "../../content/WelcomeContent.json";
 import VirtualHome from "../../content/VirtualHome.json";
 import Timeline from "../../content/Timeline.json";
-import ProductContent from "../../content/ProductContent.json";
+import CallContent from "../../content/CallContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
 import DatesImage from "../../assets/png/dates.png";
@@ -22,26 +22,16 @@ const Home = () => {
     <Container>
       <ScrollToTop />
       <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
+        title={WelcomeContent.title}
+        content={WelcomeContent.text}
+        button={WelcomeContent.button}
         id='video'
       />
       <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
+        title={WelcomeContent.title}
+        content={WelcomeContent.text}
+        button={WelcomeContent.button}
         id='front'
-      />
-      <ContentBlock
-        type='right'
-        title={IntroContent.title}
-        content={IntroContent.text}
-        icon='developer.svg'
-        image={DatesImage}
-        width='145%'
-        height='145%'
-        id='intro'
       />
       <ContentBlock
         type='left'
@@ -50,8 +40,8 @@ const Home = () => {
         section={VirtualHome.section}
         icon='graphs.svg'
         image={HomeImage}
-        width='130%'
-        height='130%'
+        width='120%'
+        height='120%'
         id='virtual_home'
       />
       <ContentBlock
@@ -66,8 +56,19 @@ const Home = () => {
       />
       <ContentBlock
         type='left'
-        title={ProductContent.title}
-        content={ProductContent.text}
+        title={DatesContent.title}
+        content={DatesContent.text}
+        icon='developer.svg'
+        image={DatesImage}
+        width='145%'
+        height='145%'
+        id='intro'
+      />
+
+      <ContentBlock
+        type='right'
+        title={CallContent.title}
+        content={CallContent.text}
         icon='waving.svg'
         image={CallImage}
         width='125%'
