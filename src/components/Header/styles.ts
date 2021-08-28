@@ -35,7 +35,7 @@ export const CustomNavLink = styled("div")`
 
 export const ContactWrapper = styled("div")<any>`
   cursor: pointer;
-  width: ${(p) => (p.width ? "100%" : "110px")};
+  width: ${(p) => (p.width ? "100%" : "100px")};
   font-weight: 700;
   text-align: center;
   border-radius: 1.25rem;
@@ -67,13 +67,13 @@ export const Menu = styled("h5")`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #18216d;
   transition: color 0.2s ease-in;
-  margin: 0.5rem 2rem;
+  margin: 1rem 1rem;
 
   @media only screen and (max-width: 768px) {
-    margin: 1.25rem 2rem;
+    margin: 1.25rem 1.25rem;
   }
 `;
 

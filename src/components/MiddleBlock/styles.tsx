@@ -14,7 +14,7 @@ export const MiddleBlockSection = styled("section")`
 
 export const VideoEmbed = styled("div")`
   position: relative;
-  padding: 2rem 0 0rem;
+  padding: 1rem 0 0rem;
   text-align: center;
   justify-content: center;
 `;

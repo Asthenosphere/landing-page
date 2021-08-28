@@ -8,7 +8,6 @@ import {
   NotHidden,
   Menu,
   CustomNavLinkSmall,
-  Label,
   Outline,
   Span,
 } from "./styles";
@@ -68,17 +67,17 @@ const Header = () => {
             <Outline />
           </Burger>
         </Row>
-        <Drawer closable={false} visible={visible} onClose={onClose}>
-          <Col style={{ marginBottom: "2.5rem" }}>
-            <Label onClick={onClose}>
-              <Col span={12}>
-                <Menu>Menu</Menu>
-              </Col>
-              <Col span={12}>
-                <Outline />
-              </Col>
-            </Label>
-          </Col>
+        <Drawer
+          closable={false}
+          visible={visible}
+          placement='left'
+          onClose={onClose}
+        >
+          <Row justify='center'>
+            <Col style={{ marginBottom: "2.5rem" }}>
+              <Menu>Menu</Menu>
+            </Col>
+          </Row>
           <MenuItem />
         </Drawer>
       </Container>
