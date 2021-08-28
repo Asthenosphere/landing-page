@@ -17,6 +17,10 @@ export const VideoEmbed = styled("div")`
   padding: 1rem 0 0rem;
   text-align: center;
   justify-content: center;
+
+  @media screen and (max-width: 576px) {
+    padding: 10rem 0 0rem;
+  }
 `;
 
 export const VideoBlock = styled("div")`
