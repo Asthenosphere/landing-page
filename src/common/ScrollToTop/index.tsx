@@ -25,7 +25,7 @@ const ScrollToTop = () => {
   }, []);
 
   const scrollUp = () => {
-    const element = document.getElementById("intro") as HTMLDivElement;
+    const element = document.getElementById("front") as HTMLDivElement;
     element.scrollIntoView({
       behavior: "smooth",
       block: "end",
@@ -35,7 +35,7 @@ const ScrollToTop = () => {
 
   return (
     <ScrollUpContainer onClick={scrollUp} show={showScroll}>
-      <SvgIcon src="scroll-top.svg" width="20px" height="20px" />
+      <SvgIcon src='scroll-top.svg' width='20px' height='20px' />
     </ScrollUpContainer>
   );
 };

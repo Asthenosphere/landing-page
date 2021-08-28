@@ -16,45 +16,45 @@ const Home = () => {
   return (
     <Container>
       <ScrollToTop />
-      <ContentBlock
-        type="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
-        icon="developer.svg"
-        id="intro"
-      />
       <MiddleBlock
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
+        id='front'
       />
       <ContentBlock
-        type="left"
+        type='right'
+        title={IntroContent.title}
+        content={IntroContent.text}
+        icon='developer.svg'
+        id='intro'
+      />
+      <ContentBlock
+        type='left'
         title={VirtualHome.title}
         content={VirtualHome.text}
         section={VirtualHome.section}
-        icon="graphs.svg"
-        id="virtual_home"
+        icon='graphs.svg'
+        id='virtual_home'
       />
       <ContentBlock
-        type="right"
+        type='right'
         title={Timeline.title}
         content={Timeline.text}
-        icon="product-launch.svg"
-        id="timeline"
+        icon='product-launch.svg'
+        id='timeline'
       />
       <ContentBlock
-        type="left"
+        type='left'
         title={ProductContent.title}
         content={ProductContent.text}
-        icon="waving.svg"
-        id="communicate"
+        icon='waving.svg'
+        id='communicate'
       />
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}
-        id="contact"
+        id='contact'
       />
     </Container>
   );

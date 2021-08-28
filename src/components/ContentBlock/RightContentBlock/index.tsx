@@ -24,9 +24,9 @@ const RightBlock = ({
     });
   };
   return (
-    <RightBlockContainer>
-      <Fade direction="right">
-        <Row justify="space-between" align="middle" id={id}>
+    <RightBlockContainer id={id}>
+      <Fade direction='right'>
+        <Row justify='space-between' align='middle'>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{title}</h6>
@@ -34,12 +34,14 @@ const RightBlock = ({
               <ButtonWrapper>
                 {typeof button === "object" &&
                   button.map((item: any, id: number) => {
+                    console.log(item);
+                    console.log(id);
                     return (
                       <Button
                         key={id}
                         color={item.color}
                         fixedWidth={true}
-                        onClick={() => scrollTo("about")}
+                        onClick={() => scrollTo(`${item.destination}`)}
                       >
                         {item.title}
                       </Button>
@@ -49,7 +51,7 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            <SvgIcon src={icon} width='100%' height='100%' />
           </Col>
         </Row>
       </Fade>

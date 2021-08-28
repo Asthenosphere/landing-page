@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import Container from "../../common/Container";
-import { SvgIcon } from "../../common/SvgIcon";
 import {
   HeaderSection,
   LogoContainer,
@@ -13,6 +12,7 @@ import {
   Outline,
   Span,
 } from "./styles";
+import BookImage from "../../assets/png/book.png";
 
 const Header = () => {
   const [visible, setVisibility] = useState(false);
@@ -35,6 +35,9 @@ const Header = () => {
     };
     return (
       <>
+        <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
+          <Span>Dates</Span>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("virtual_home")}>
           <Span>Virtual Home</Span>
         </CustomNavLinkSmall>
@@ -56,7 +59,7 @@ const Header = () => {
       <Container>
         <Row justify='space-between'>
           <LogoContainer to='/' aria-label='homepage'>
-            <SvgIcon src='logo.svg' width='150px' height='64px' />
+            <img src={BookImage} alt='Our Story' width='64px' height='64px' />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
