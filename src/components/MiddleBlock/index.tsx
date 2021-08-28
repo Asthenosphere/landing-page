@@ -1,8 +1,15 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { JackInTheBox } from "react-awesome-reveal";
+import { Fade, JackInTheBox } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
-import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
+import {
+  MiddleBlockSection,
+  Content,
+  ContentWrapper,
+  VideoBlock,
+  IframeBlock,
+  VideoEmbed,
+} from "./styles";
 
 interface MiddleBlockProps {
   title: string;
@@ -18,10 +25,30 @@ const MiddleBlock = ({ title, content, button, id }: MiddleBlockProps) => {
       behavior: "smooth",
     });
   };
+
+  if (id === "video") {
+    return (
+      <VideoEmbed id={id}>
+        <Fade>
+          <VideoBlock>
+            <IframeBlock
+              width='848'
+              height='624'
+              src={`https://www.youtube.com/embed/XLBZDV2S6FA`}
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+              title='Embedded youtube'
+            />
+          </VideoBlock>
+        </Fade>
+      </VideoEmbed>
+    );
+  }
   return (
-    <MiddleBlockSection>
+    <MiddleBlockSection id={id}>
       <JackInTheBox>
-        <Row justify='center' align='middle' id={id}>
+        <Row justify='center' align='middle'>
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
               <h6>{title}</h6>
