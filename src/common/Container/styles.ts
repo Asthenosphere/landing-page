@@ -6,12 +6,27 @@ export const StyledContainer = styled("div")<any>`
   overflow-x: hidden;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 120px;
+  padding: 0 240px;
   border-top: ${(p) => (p.border ? "1px solid #CDD1D4" : "")};
+
+  @media only screen and (max-width: 1440px) {
+    max-width: 100%;
+    padding: 0 200px;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    max-width: 100%;
+    padding: 0 160px;
+  }
+
+  @media only screen and (max-width: 1125px) {
+    max-width: 100%;
+    padding: 0 120px;
+  }
 
   @media only screen and (max-width: 1024px) {
     max-width: 100%;
-    padding: 0 60px;
+    padding: 0 80px;
   }
 
   @media only screen and (max-width: 768px) {
