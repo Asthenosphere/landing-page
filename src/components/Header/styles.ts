@@ -49,6 +49,16 @@ export const Burger = styled("div")`
   }
 `;
 
+export const BurgerDark = styled("div")`
+  @media only screen and (max-width: 1024px) {
+    display: block;
+  }
+  display: none;
+  svg {
+    fill: #fff;
+  }
+`;
+
 export const NotHidden = styled("div")`
   @media only screen and (max-width: 1024px) {
     display: none;

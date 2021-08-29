@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Row, Col, Drawer } from "antd";
+import { Row, Col, Drawer, Button } from "antd";
 import Container from "../../common/Container";
 import {
   HeaderSection,
   LogoContainer,
   Burger,
+  BurgerDark,
   NotHidden,
   Menu,
   CustomNavLinkSmall,
@@ -12,9 +13,11 @@ import {
   Span,
 } from "./styles";
 import BookImage from "../../assets/png/book.png";
+import useDarkMode from "use-dark-mode";
 
 const Header = () => {
   const [visible, setVisibility] = useState(false);
+  const darkMode = useDarkMode(false);
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -34,20 +37,59 @@ const Header = () => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
+        <CustomNavLinkSmall
+          onClick={() => scrollTo("intro")}
+          style={{ color: darkMode.value ? "#fff" : "#000" }}
+        >
           <Span>Dates</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("virtual_home")}>
+        <CustomNavLinkSmall
+          onClick={() => scrollTo("virtual_home")}
+          style={{ color: darkMode.value ? "#fff" : "#000" }}
+        >
           <Span>Virtual Home</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("timeline")}>
+        <CustomNavLinkSmall
+          onClick={() => scrollTo("timeline")}
+          style={{ color: darkMode.value ? "#fff" : "#000" }}
+        >
           <Span>Timeline</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("communicate")}>
+        <CustomNavLinkSmall
+          onClick={() => scrollTo("communicate")}
+          style={{ color: darkMode.value ? "#fff" : "#000" }}
+        >
           <Span>Communication</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
+        <CustomNavLinkSmall
+          onClick={() => scrollTo("contact")}
+          style={{ color: darkMode.value ? "#fff" : "#000" }}
+        >
           <Span>Contact</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall>
+          <Button
+            shape='circle'
+            type='text'
+            onClick={darkMode.disable}
+            style={{
+              marginRight: "0.15rem",
+              color: darkMode.value ? "#fff" : "#000",
+            }}
+          >
+            ☀
+          </Button>
+          <Button
+            shape='circle'
+            type='text'
+            onClick={darkMode.enable}
+            style={{
+              marginLeft: "0.15rem",
+              color: darkMode.value ? "#fff" : "#000",
+            }}
+          >
+            ☾
+          </Button>
         </CustomNavLinkSmall>
       </>
     );
@@ -58,20 +100,29 @@ const Header = () => {
       <Container>
         <Row justify='space-between'>
           <LogoContainer to='/' aria-label='homepage'>
-            <img src={BookImage} alt='Our Story' width='64px' height='64px' />
+            <img src={BookImage} alt='Our Story' width='48px' height='48px' />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
           </NotHidden>
-          <Burger onClick={showDrawer}>
-            <Outline />
-          </Burger>
+          {darkMode.value ? (
+            <BurgerDark onClick={showDrawer}>
+              <Outline />
+            </BurgerDark>
+          ) : (
+            <Burger onClick={showDrawer}>
+              <Outline />
+            </Burger>
+          )}
         </Row>
         <Drawer
           closable={false}
           visible={visible}
           placement='right'
           onClose={onClose}
+          drawerStyle={{
+            backgroundColor: darkMode.value ? "#111111" : "#fff",
+          }}
         >
           <Row justify='center'>
             <Col style={{ marginBottom: "2.5rem" }}>

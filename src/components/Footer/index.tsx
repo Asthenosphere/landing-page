@@ -11,7 +11,10 @@ import {
   LogoContainer,
   Large,
   FooterContainer,
+  LargeDark,
 } from "./styles";
+
+import useDarkMode from "use-dark-mode";
 
 interface SocialLinkProps {
   href: string;
@@ -19,6 +22,8 @@ interface SocialLinkProps {
 }
 
 const Footer = () => {
+  const darkMode = useDarkMode(false);
+
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
       <a
@@ -28,47 +33,64 @@ const Footer = () => {
         key={src}
         aria-label={src}
       >
-        <SvgIcon src={src} width='25px' height='25px' />
+        <SvgIcon
+          src={src}
+          width='25px'
+          height='25px'
+          color={darkMode.value ? "#ffffff" : "#000000"}
+        />
       </a>
+    );
+  };
+
+  const buildLinks = (content: string) => {
+    return (
+      <>
+        {darkMode.value ? (
+          <LargeDark to='/' left='true'>
+            {content}
+          </LargeDark>
+        ) : (
+          <Large to='/' left='true'>
+            {content}
+          </Large>
+        )}
+      </>
     );
   };
 
   return (
     <>
-      <FooterSection>
+      <FooterSection
+        style={{
+          backgroundColor: darkMode.value ? "#1e1e1e" : "rgb(241, 242, 243)",
+        }}
+      >
         <Container>
           <Row justify='space-between'>
             <Col lg={4} md={12} sm={12} xs={12}>
               <Title>Support</Title>
-              <Large left='true' to='/'>
-                Support Center
-              </Large>
-              <Large left='true' to='/'>
-                Customer Support
-              </Large>
+              {buildLinks("Support Center")}
+              {buildLinks("Customer Support")}
             </Col>
             <Col lg={4} md={12} sm={12} xs={12}>
               <Title>Policy</Title>
-              <Large to='/' left='true'>
-                Application Security
-              </Large>
-              <Large left='true' to='/'>
-                Software Principles
-              </Large>
+              {buildLinks("Application Security")}
+              {buildLinks("Software Principles")}
             </Col>
             <Col lg={4} md={12} sm={12} xs={12}>
               <Title>About Us</Title>
-              <Large to='/' left='true'>
-                Our Team
-              </Large>
-              <Large left='true' to='/'>
-                Address
-              </Large>
+              {buildLinks("Our Team")}
+              {buildLinks("Address")}
             </Col>
           </Row>
         </Container>
       </FooterSection>
-      <Extra>
+      <Extra
+        style={{
+          backgroundColor: darkMode.value ? "#1e1e1e" : "rgb(241, 242, 243)",
+        }}
+      >
         <Container border={true}>
           <Row
             justify='space-between'
@@ -88,7 +110,7 @@ const Footer = () => {
             <FooterContainer>
               <SocialLink
                 href='https://github.com/Asthenosphere/landing-page'
-                src='github.svg'
+                src={darkMode.value ? "github-dark.svg" : "github.svg"}
               />
             </FooterContainer>
           </Row>

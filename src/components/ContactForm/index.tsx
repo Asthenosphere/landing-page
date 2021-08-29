@@ -8,11 +8,14 @@ import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import useDarkMode from "use-dark-mode";
 
 const Contact = ({ title, content, id }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     validate
   ) as any;
+
+  const darkMode = useDarkMode(false);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type];
@@ -42,6 +45,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                     placeholder='Your Name'
                     value={values.name || ""}
                     onChange={handleChange}
+                    color={darkMode.value ? "#aaaaaa" : "rgb(241, 242, 243)"}
                   />
                   <ValidationType type='name' />
                 </Col>
@@ -52,6 +56,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                     placeholder='Your Email'
                     value={values.email || ""}
                     onChange={handleChange}
+                    color={darkMode.value ? "#aaaaaa" : "rgb(241, 242, 243)"}
                   />
                   <ValidationType type='email' />
                 </Col>
@@ -61,11 +66,17 @@ const Contact = ({ title, content, id }: ContactProps) => {
                     value={values.message || ""}
                     name='message'
                     onChange={handleChange}
+                    color={darkMode.value ? "#aaaaaa" : "rgb(241, 242, 243)"}
                   />
                   <ValidationType type='message' />
                 </Col>
                 <ButtonContainer>
-                  <Button name='submit'>Submit</Button>
+                  <Button
+                    name='submit'
+                    color={darkMode.value ? "#6CBDBD" : "#AEE6E6"}
+                  >
+                    Submit
+                  </Button>
                 </ButtonContainer>
               </FormGroup>
             </Row>

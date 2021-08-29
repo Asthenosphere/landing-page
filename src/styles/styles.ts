@@ -31,6 +31,16 @@ export const Styles = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    body.light-mode {
+        background-color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    body.dark-mode {
+        background-color: #111111;
+        transition: background-color 0.3s ease;
+    }
+
     a:hover {
         color: #AEE6E6;
     }

@@ -9,7 +9,7 @@ export const FooterSection = styled("footer")`
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #FFA45B;
+  color: #ffa45b;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -68,10 +68,29 @@ export const Large = styled(Link)<any>`
   }
 `;
 
+export const LargeDark = styled(Link)<any>`
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 0.625rem;
+  transition: all 0.3s ease-in-out;
+  max-width: max-content;
+
+  &:hover {
+    color: rgb(255, 130, 92);
+    text-underline-position: under;
+    text-decoration: rgb(255, 130, 92) underline;
+  }
+`;
+
 export const Chat = styled("p")`
   color: #18216d;
   max-width: fit-content;
-  border-bottom: 1px solid #FFA45B;
+  border-bottom: 1px solid #ffa45b;
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;

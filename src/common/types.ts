@@ -15,6 +15,7 @@ export interface SvgIconProps {
   src: string;
   width: string;
   height: string;
+  color?: string;
 }
 
 export interface InputProps {
@@ -22,6 +23,7 @@ export interface InputProps {
   placeholder: string;
   type?: string;
   value?: string;
+  color?: string;
   onChange: (
     event:
       | React.ChangeEvent<HTMLInputElement>
