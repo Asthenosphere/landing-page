@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Row, Col, Drawer, Button } from "antd";
+import { Row, Col, Drawer } from "antd";
 import Container from "../../common/Container";
 import {
   HeaderSection,
@@ -14,6 +14,7 @@ import {
 } from "./styles";
 import BookImage from "../../assets/png/book.png";
 import useDarkMode from "use-dark-mode";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 const Header = () => {
   const [visible, setVisibility] = useState(false);
@@ -68,17 +69,13 @@ const Header = () => {
           <Span>Contact</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall>
-          <Button
-            shape='circle'
-            type='text'
-            onClick={darkMode.toggle}
-            style={{
-              marginLeft: "0.15rem",
-              color: darkMode.value ? "#fff" : "#000",
-            }}
-          >
-            {darkMode.value ? "☀️" : "🌙"}
-          </Button>
+          <Span>
+            <DarkModeSwitch
+              checked={darkMode.value}
+              onChange={darkMode.toggle}
+              size={16}
+            />
+          </Span>
         </CustomNavLinkSmall>
       </>
     );

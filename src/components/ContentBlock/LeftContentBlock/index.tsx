@@ -11,6 +11,7 @@ import {
   MinTitle,
   MinPara,
 } from "./styles";
+import useDarkMode from "use-dark-mode";
 
 const LeftContentBlock = ({
   icon,
@@ -20,6 +21,8 @@ const LeftContentBlock = ({
   section,
   id,
 }: ContentBlockProps) => {
+  const darkMode = useDarkMode(false);
+
   return (
     <LeftContentSection id={id}>
       <Fade direction='left'>
@@ -43,7 +46,11 @@ const LeftContentBlock = ({
                     section.map((item: any, id: number) => {
                       return (
                         <Col key={id} span={11}>
-                          <MinTitle>{item.title}</MinTitle>
+                          <MinTitle
+                            style={{ color: darkMode.value ? "#fff" : "#000" }}
+                          >
+                            {item.title}
+                          </MinTitle>
                           <MinPara>{item.content}</MinPara>
                         </Col>
                       );
