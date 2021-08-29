@@ -30,6 +30,7 @@ const MiddleBlock = ({ title, content, button, id }: MiddleBlockProps) => {
     return (
       <VideoEmbed id={id}>
         <Fade>
+          <h6>Once upon a time...</h6>
           <VideoBlock>
             <IframeBlock
               width='848'
