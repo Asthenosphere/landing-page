@@ -7,7 +7,7 @@ const Input = ({ name, placeholder, value, color, onChange }: InputProps) => (
   <Container>
     <Label
       htmlFor={name}
-      style={{ color: color === "#aaaaaa" ? "#ffffff" : "#000000" }}
+      style={{ color: color === "#CCCCCC" ? "#ffffff" : "#000000" }}
     >
       {name}
     </Label>

@@ -71,24 +71,13 @@ const Header = () => {
           <Button
             shape='circle'
             type='text'
-            onClick={darkMode.disable}
-            style={{
-              marginRight: "0.15rem",
-              color: darkMode.value ? "#fff" : "#000",
-            }}
-          >
-            ☀
-          </Button>
-          <Button
-            shape='circle'
-            type='text'
-            onClick={darkMode.enable}
+            onClick={darkMode.toggle}
             style={{
               marginLeft: "0.15rem",
               color: darkMode.value ? "#fff" : "#000",
             }}
           >
-            ☾
+            {darkMode.value ? "☀️" : "🌙"}
           </Button>
         </CustomNavLinkSmall>
       </>

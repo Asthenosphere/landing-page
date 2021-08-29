@@ -45,7 +45,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                     placeholder='Your Name'
                     value={values.name || ""}
                     onChange={handleChange}
-                    color={darkMode.value ? "#aaaaaa" : "rgb(241, 242, 243)"}
+                    color={darkMode.value ? "#CCCCCC" : "rgb(241, 242, 243)"}
                   />
                   <ValidationType type='name' />
                 </Col>
@@ -56,7 +56,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                     placeholder='Your Email'
                     value={values.email || ""}
                     onChange={handleChange}
-                    color={darkMode.value ? "#aaaaaa" : "rgb(241, 242, 243)"}
+                    color={darkMode.value ? "#CCCCCC" : "rgb(241, 242, 243)"}
                   />
                   <ValidationType type='email' />
                 </Col>
@@ -66,7 +66,7 @@ const Contact = ({ title, content, id }: ContactProps) => {
                     value={values.message || ""}
                     name='message'
                     onChange={handleChange}
-                    color={darkMode.value ? "#aaaaaa" : "rgb(241, 242, 243)"}
+                    color={darkMode.value ? "#CCCCCC" : "rgb(241, 242, 243)"}
                   />
                   <ValidationType type='message' />
                 </Col>
